@@ -1,0 +1,253 @@
+<!-- ==========================================================
+     PROJECT TITLE: Classroom Resource Sharing Portal
+     FILE: project.html
+     CONTRIBUTOR: Group Member 1 (Registration No: RK4P26VWB54)
+     RESPONSIBILITY: HTML5 Structure, Forms & Semantic Layout
+     ========================================================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classroom Resource Sharing Portal</title>
+  
+  <!-- Linking External CSS File (Contributed by Group Member 2) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Header Section -->
+  <header class="header">
+    <div class="container header-content">
+      <div class="header-branding">
+        <h1>📚 Classroom Resource Sharing Portal</h1>
+        <p>A centralized academic portal for sharing lecture notes, templates, PYQs, and study links.</p>
+      </div>
+      <div class="header-group">
+        <span class="group-label">Team Members:</span>
+        <div class="badge-list">
+          <span class="badge badge-html" title="HTML Structure">RK4P26VWB54 (HTML)</span>
+          <span class="badge badge-css" title="CSS Styling">RK4P26VWB55 (CSS)</span>
+          <span class="badge badge-js" title="JavaScript Interactivity">RK4P26VWB56 (JS)</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container page-content">
+
+    <!-- Overview & Problem Statement Banner -->
+    <section class="banner-card">
+      <div class="banner-text">
+        <h2>🎯 Project Objective</h2>
+        <p>
+          Students and faculty frequently share useful study notes, templates, and reference materials through scattered channels. 
+          This portal provides a unified, searchable platform with course tagging, moderation, rating, and bookmarking features.
+        </p>
+      </div>
+      <!-- Real-time Summary Counters -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-number" id="statTotal">0</span>
+          <span class="stat-label">Approved Resources</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" id="statBookmarks">0</span>
+          <span class="stat-label">Saved Bookmarks</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" id="statPending">0</span>
+          <span class="stat-label">Under Moderation</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" id="statDownloads">0</span>
+          <span class="stat-label">Total Downloads</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Notification Toast for User Actions -->
+    <div id="toastNotification" class="toast hidden"></div>
+
+    <!-- Two-Column Layout (Sidebar + Main Explorer) -->
+    <div class="layout-grid">
+
+      <!-- LEFT COLUMN: Resource Upload Form & Course Reference -->
+      <aside class="sidebar-column">
+        
+        <!-- Upload / Link Resource Card -->
+        <div class="panel">
+          <div class="panel-header">
+            <h3>📤 Upload / Link Resource</h3>
+            <p>Contribute notes, links, or templates</p>
+          </div>
+          
+          <form id="uploadForm" class="upload-form">
+            <!-- Resource Title -->
+            <div class="form-group">
+              <label for="resTitle">Resource Title *</label>
+              <input type="text" id="resTitle" placeholder="e.g. Unit 2 Differential Equations Notes" required>
+            </div>
+
+            <!-- Subject & Course Code Dropdown -->
+            <div class="form-group">
+              <label for="resCourse">Subject & Course Code *</label>
+              <select id="resCourse" required>
+                <option value="" disabled selected>Select Course...</option>
+                <option value="CSE111">CSE111 - Orientation to Computing</option>
+                <option value="MEC136">MEC136 - Engineering Drawing and Autocad</option>
+                <option value="INT108">INT108 - Python</option>
+                <option value="CSE326">CSE326 - Internet Programming</option>
+                <option value="INT335">INT335 - Design Thinking</option>
+                <option value="MTH165">MTH165 - Engineering Mathematics</option>
+              </select>
+            </div>
+
+            <!-- Category Dropdown -->
+            <div class="form-group">
+              <label for="resCategory">Category *</label>
+              <select id="resCategory" required>
+                <option value="Notes">Lecture Notes</option>
+                <option value="Templates">Templates & Cheatsheets</option>
+                <option value="PYQs">Previous Year Questions (PYQs)</option>
+                <option value="Links">Useful Web Links</option>
+                <option value="Assignments">Assignments & Labs</option>
+              </select>
+            </div>
+
+            <!-- Format or Link -->
+            <div class="form-group">
+              <label for="resFormat">Format / File Type *</label>
+              <input type="text" id="resFormat" placeholder="e.g. PDF (2.4 MB) or Web Link" required>
+            </div>
+
+            <!-- Shared By -->
+            <div class="form-group">
+              <label for="resAuthor">Shared By (Name/Roll No) *</label>
+              <input type="text" id="resAuthor" placeholder="e.g. Ayush / RK4P26VWB54" required>
+            </div>
+
+            <!-- Short Description -->
+            <div class="form-group">
+              <label for="resDescription">Short Description *</label>
+              <textarea id="resDescription" rows="3" placeholder="Brief summary of topics covered..." required></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-submit">🚀 Submit for Moderation</button>
+          </form>
+        </div>
+
+        <!-- Subject Guide & Course Codes Reference Card -->
+        <div class="panel">
+          <div class="panel-header">
+            <h3>📖 Course Directory</h3>
+            <p>Official subjects & course codes</p>
+          </div>
+          <ul class="course-code-list">
+            <li>
+              <span class="code-tag">CSE111</span>
+              <span class="course-name">Orientation to computing</span>
+            </li>
+            <li>
+              <span class="code-tag">MEC136</span>
+              <span class="course-name">Engineering Drawing and Autocad</span>
+            </li>
+            <li>
+              <span class="code-tag">INT108</span>
+              <span class="course-name">Python</span>
+            </li>
+            <li>
+              <span class="code-tag">CSE326</span>
+              <span class="course-name">Internet Programming</span>
+            </li>
+            <li>
+              <span class="code-tag">INT335</span>
+              <span class="course-name">Design Thinking</span>
+            </li>
+            <li>
+              <span class="code-tag">MTH165</span>
+              <span class="course-name">Engineering Mathematics</span>
+            </li>
+          </ul>
+        </div>
+
+      </aside>
+
+      <!-- RIGHT COLUMN: Search, Filter, Tabs & Resource Cards -->
+      <section class="main-column">
+
+        <!-- Search & Filter Controls -->
+        <div class="panel search-filter-panel">
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="searchInput" placeholder="Search by title, subject, code or keyword...">
+          </div>
+          <div class="filter-controls">
+            <!-- Filter by Course -->
+            <select id="courseFilter" aria-label="Filter by Course">
+              <option value="ALL">All Subjects</option>
+              <option value="CSE111">CSE111 (Orientation to computing)</option>
+              <option value="MEC136">MEC136 (Engineering Drawing & Autocad)</option>
+              <option value="INT108">INT108 (Python)</option>
+              <option value="CSE326">CSE326 (Internet Programming)</option>
+              <option value="INT335">INT335 (Design Thinking)</option>
+              <option value="MTH165">MTH165 (Engineering Mathematics)</option>
+            </select>
+
+            <!-- Filter by Category -->
+            <select id="categoryFilter" aria-label="Filter by Category">
+              <option value="ALL">All Categories</option>
+              <option value="Notes">Lecture Notes</option>
+              <option value="Templates">Templates & Cheatsheets</option>
+              <option value="PYQs">PYQs</option>
+              <option value="Links">Useful Links</option>
+              <option value="Assignments">Assignments & Labs</option>
+            </select>
+
+            <!-- Reset Button -->
+            <button id="btnResetFilters" class="btn btn-secondary" title="Clear filters">Reset</button>
+          </div>
+        </div>
+
+        <!-- Navigation Tabs: Approved / Bookmarks / Moderation Queue -->
+        <div class="tabs-nav">
+          <button class="tab-btn active" id="tabApproved" onclick="switchTab('approved')">
+            📂 Approved Resources (<span id="countApproved">0</span>)
+          </button>
+          <button class="tab-btn" id="tabBookmarks" onclick="switchTab('bookmarks')">
+            ⭐ My Bookmarks (<span id="countBookmarks">0</span>)
+          </button>
+          <button class="tab-btn" id="tabModeration" onclick="switchTab('moderation')">
+            🛡️ Moderation Queue (<span id="countModeration">0</span>)
+          </button>
+        </div>
+
+        <!-- Dynamic Resource Grid Container -->
+        <div id="resourceGrid" class="resource-grid">
+          <!-- Populated dynamically via java.js -->
+        </div>
+
+      </section>
+    </div>
+
+  </main>
+
+  <!-- Page Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p><strong>Classroom Resource Sharing Portal</strong> | Academic Web Technology Project</p>
+      <p class="footer-subtext">
+        Created by Group: <strong>RK4P26VWB54</strong> (HTML) • 
+        <strong>RK4P26VWB55</strong> (CSS) • 
+        <strong>RK4P26VWB56</strong> (JavaScript)
+      </p>
+    </div>
+  </footer>
+
+  <!-- Linking External JavaScript File (Contributed by Group Member 3) -->
+  <script src="script.js"></script>
+</body>
+</html>
+
