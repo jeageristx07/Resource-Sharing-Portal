@@ -4,7 +4,7 @@ A collaborative Classroom Resource Sharing Portal built with HTML, CSS, and JS f
 
 > A centralized, student-driven web platform designed to organize, share, and review coursework study materials, lecture notes, and reference links.
 
-🌐 **Live Demo:** [View Live Portal](https://your-username.github.io/your-repo-name/)
+🌐 **Live Demo:** [View Live Portal](https://jeageristx07.github.io/Resource-Sharing-Portal/)
 
 ---
 
@@ -59,26 +59,6 @@ To demonstrate both foundational web layout skills and dynamic DOM manipulation,
    * Click the **Star Icons (★)** on any resource card to rate its quality.
    * Click the **Bookmark Icon (🔖)** to save the item to your personal saved list for quick revision.
 
----
-
-### 2. How to Run the Project Locally
-
-If you want to run or modify this project on your own machine:
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-   ```
-2. **Open the project folder:**
-   ```bash
-   cd your-repo-name
-   ```
-3. **Launch in your browser:**
-   * **Direct Method:** Double-click `index.html` to open it in any web browser.
-   * **VS Code Method:** Right-click `index.html` in Visual Studio Code and select **Open with Live Server** for automatic hot-reloading.
-
----
-
 ## 📁 File Structure
 
 ```text
@@ -97,8 +77,8 @@ This project was collaboratively designed and built by a 3-member team:
 | Team Member | Role & Primary Responsibilities | GitHub Profile |
 | :--- | :--- | :--- |
 | **Ayush Maurya** | **Project Structure & Core Development:** Modular architecture setup, UI/UX layout integration, and interactive portal functionality. | [@your-username](https://github.com/your-username) |
-| **[Aditya Yadav]** | **Frontend Styling & Responsive Design:** CSS3 grid/flexbox layouts, resource card design, metadata preview styling, and responsiveness. | [@member2-username](https://github.com/member2-username) |
-| **[Qamre Alam Siddhiqui]** | **DOM Logic & Feature Testing:** JavaScript event handling for search filtering, star ratings, bookmarking, and moderation workflows. | [@member3-username](https://github.com/member3-username) |
+| **Aditya Yadav** | **Frontend Styling & Responsive Design:** CSS3 grid/flexbox layouts, resource card design, metadata preview styling, and responsiveness. | [@member2-username](https://github.com/member2-username) |
+| **Qamre Alam Siddhiqui** | **DOM Logic & Feature Testing:** JavaScript event handling for search filtering, star ratings, bookmarking, and moderation workflows. | [@member3-username](https://github.com/member3-username) |
 
 ---
 
