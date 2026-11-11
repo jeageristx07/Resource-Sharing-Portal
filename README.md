@@ -76,9 +76,9 @@ This project was collaboratively designed and built by a 3-member team:
 
 | Team Member | Role & Primary Responsibilities | GitHub Profile |
 | :--- | :--- | :--- |
-| **Ayush Maurya** | **Project Structure & Core Development:** Modular architecture setup, UI/UX layout integration, and interactive portal functionality. | [@your-username](https://github.com/your-username) |
-| **Qamre Alam Siddhiqui** | **Frontend Styling & Responsive Design:** CSS3 grid/flexbox layouts, resource card design, metadata preview styling, and responsiveness. | [@member2-username](https://github.com/member2-username) |
-| **Aditya Yadav** | **DOM Logic & Feature Testing:** JavaScript event handling for search filtering, star ratings, bookmarking, and moderation workflows. | [@member3-username](https://github.com/member3-username) |
+| **Ayush Maurya** | **Project Structure & Core Development:** Modular architecture setup, UI/UX layout integration, and interactive portal functionality. | [@jeageristx07](https://github.com/jeageristx07) |
+| **Qamre Alam Siddhiqui** | **Frontend Styling & Responsive Design:** CSS3 grid/flexbox layouts, resource card design, metadata preview styling, and responsiveness. | [@Alam-Siddique0786](https://github.com/Alam-Siddique0786) |
+| **Aditya Yadav** | **DOM Logic & Feature Testing:** JavaScript event handling for search filtering, star ratings, bookmarking, and moderation workflows. | [@adityaDebugs25](https://github.com/adityaDebugs25) |
 
 ---
 
